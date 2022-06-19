@@ -131,7 +131,18 @@
 <p><strong><span></span></strong></p>
 <p><strong><span></span></strong></p>
 <h2>w7</h2>
-<p></p>
+<p><span>Blog查驗:<a href="https://40923229.github.io/cd2022/blog/w7_summary.html">https://40923229.github.io/cd2022/blog/w7_summary.html</a></span></p>
+<h4>設法以隨身程式系統編譯此程式碼:</h4>
+<ol>
+<li>git clone<span> </span><a href="https://github.com/mdecourse/scarysim.git">https://github.com/mdecourse/scarysim.git</a></li>
+<li>修改 scarysim.pro, 蓋掉第 11 行, 成為 # LIBS     += -lglut -lGLU</li>
+<li>cd scarysim</li>
+<li>qmake -o Makefile scarysim.pro</li>
+<li>mingw32-make -f Makefile.Release 可以在 release 目錄取得 scarysim.exe</li>
+<li>因為 scarysim.exe 執行需要 base.obj, arm1.obj, arm2.obj, arm3.obj 等零件外型檔案, 以及對應的 .mtl 材質檔案, 因此可將 scarysim.exe 移至倉儲根目錄, 並且需要 msys64_20210419\mingw64\bin 路徑中的 dll 動態連結程式庫配合執行.</li>
+<li>由於此套程式碼在 Target 模式下, 零組件間會造成干涉, 表示其 Inverse Kinematic 運算並不正確, 請設法修正此錯誤後, 修改其零件尺寸與操作控制方法, 設法模擬 MTB 的<span> </span><a href="https://www.youtube.com/results?search_query=mtb+robot">Pick and Place demo</a><span> </span>範例.</li>
+<li>請各組指定組員分別利用 Solvespace、NX12、NX1980、NX2008 與 Onshape 繪製<span> </span><a href="https://www.youtube.com/results?search_query=mtb+robot">Pick and Place demo</a><span> </span>範例所需的零組件, 並完成 Coppeliasim 4.1.0、4.2.0 與 4.3.0 版的 MTB 機械手臂 Pick and Place 模擬, 完成後請說明在使用不同 MCAD 系統與版次的情況下, 該如何執行協同產品設計專案.</li>
+</ol>
 <p></p>
 <h2>w8</h2>
 <p></p>
@@ -325,7 +336,8 @@ var winkVideoData = {
 <p><span>joint1為控制左右移動，</span><span>K</span><span>為逆時針，L為順時針</span></p>
 <p><span>joint2為控制前後移動，<span>H</span><span>為逆時針，J<span>為順時針</span></span></span></p>
 <p><span><span><span>joint3為控制上下移動<span>，</span><span>F</span><span>為逆時針，<span>G</span><span>為順時針</span></span></span></span></span></p>
-<p><img alt="" height="1040" src="/images/w15.png" width="1920"/></p><h2>w16</h2>
+<p><img alt="" height="1040" src="/images/w15.png" width="1920"/></p>
+<h2>w16</h2>
 <h3>Online Exam</h3>
 <p>第一題</p>
 <p></p>
@@ -385,10 +397,31 @@ var winkVideoData = {
 <div class="winkVideoControlBarProgressLeftClass"></div>
 <div class="winkVideoControlBarProgressEmptyMiddleClass"></div>
 <div class="winkVideoControlBarProgressRightClass"></div>
+<h2>w17</h2>
+<p></p>
+<div class="winkVideoPlayOverlayClass"><span>執行 Tic-Tae-Toe 遊戲場景模擬場景</span></div>
+<p></p>
+<p></p>
+<p></p>
+<script>
+var winkVideoData = {
+  dataVersion: 1,
+  frameRate: 20,
+  buttonFrameLength: 10,
+  buttonFrameOffset: 5,
+  frameStops: {
+  },
+};
+</script>
+<div class="winkVideoContainerClass"><video class="winkVideoClass" data-dirname="/static" data-varname="winkVideoData" height="730" width="1344">
+<source src="./../downloads/w17.mp4" type="video/mp4"/></video>
+<div class="winkVideoOverlayClass"></div>
+<div class="winkVideoControlBarClass"><button class="winkVideoControlBarPlayButtonClass"></button> <button class="winkVideoControlBarPauseButtonClass"></button>
+<div class="winkVideoControlBarProgressLeftClass"></div>
+<div class="winkVideoControlBarProgressEmptyMiddleClass"></div>
+<div class="winkVideoControlBarProgressRightClass"></div>
 <div class="winkVideoControlBarProgressFilledMiddleClass"></div>
 <div class="winkVideoControlBarProgressThumbClass"></div>
 </div>
 <div class="winkVideoPlayOverlayClass"></div>
-</div>
-</div>
-</div>
+</div></div></div></div></div>
